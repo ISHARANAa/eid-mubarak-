@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eid Mubarak 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('eid-background.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      background-color: #142d26;
+    }
+    .box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    input {
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: gold;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    .greeting {
+      font-size: 1.4rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🌙 Eid ul-Adha Mubarak!</h1>
+    <p>Enter your name to receive a special greeting:</p>
+    <input type="text" id="username" placeholder="Your name..." />
+    <br />
+    <button onclick="greetUser()">Receive Greeting</button>
+    <div class="greeting" id="greetingMsg"></div>
+  </div>
+
+  <script>
+    const encodedURL = "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tL2Y1dGhrdnpqMjY/a2V5PTE1OWNkZTdhYmYwNWQ3NTUwMjgyMzNmYmU5YzA0MDdj";
+
+    function greetUser() {
+      const name = document.getElementById("username").value;
+      const greetingDiv = document.getElementById("greetingMsg");
+
+      if (name.trim() === "") {
+        greetingDiv.innerText = "Please enter your name.";
+        return;
+      }
+
+      greetingDiv.innerHTML = `🌟 Dear <strong>${name}</strong>,<br />May your Eid ul-Adha be full of joy, blessings, and peace!`;
+
+      setTimeout(() => {
+        window.location.href = atob(encodedURL);
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
