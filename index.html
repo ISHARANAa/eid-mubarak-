@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eid Mubarak 🎉</title>
+  <title>Eid ul-Adha Mubarak 🎉</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('eid-background.jpg') no-repeat center center/cover;
+      background: url('https://i.ibb.co/gVhX0tp/eid-bg.jpg') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -48,7 +48,6 @@
       margin-top: 20px;
     }
   </style>
-  <script type='text/javascript' src='//pl26333683.profitableratecpm.com/6c/44/68/6c446821baa33042f3c04e673bbe1820.js'></script>
 </head>
 <body>
   <div class="box">
@@ -61,21 +60,23 @@
   </div>
 
   <script>
-    const encodedURL = "https://www.profitableratecpm.com/f5thkvzj26?key=159cde7abf05d755028233fbe9c0407c";
+    // Correctly Base64-encoded URL
+    const encodedURL = "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tL2Y1dGhrdnRqMjY/a2V5PTE1OWNkZTdhYmYwNWQ3NTUwMjgyMzNmYmU5YzA0MDdj";
 
     function greetUser() {
-      const name = document.getElementById("username").value;
+      const name = document.getElementById("username").value.trim();
       const greetingDiv = document.getElementById("greetingMsg");
 
-      if (name.trim() === "") {
+      if (!name) {
         greetingDiv.innerText = "Please enter your name.";
         return;
       }
 
-      greetingDiv.innerHTML = `🌟 Dear <strong>${name}</strong>,<br />May your Eid ul-Adha be full of joy, blessings, and peace!`;
+      greetingDiv.innerHTML = `🌟 Dear <strong>${name}</strong>,<br />May your Eid ul-Adha be filled with blessings, joy, and peace!`;
 
       setTimeout(() => {
-        window.location.href = atob(encodedURL);
+        const decodedURL = atob(encodedURL);
+        window.location.href = decodedURL;
       }, 4000);
     }
   </script>
